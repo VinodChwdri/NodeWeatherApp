@@ -1,7 +1,3 @@
-//console.log('hdshdjshdj')
-function getdata(address){
-    
-}
 
 const forms = document.querySelector('form')
 const searchElement = document.querySelector('input')
