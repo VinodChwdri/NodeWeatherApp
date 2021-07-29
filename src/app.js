@@ -3,6 +3,7 @@ const express = require("express")
 const path = require('path');  
 const { callbackify } = require("util");
 const app = express()
+const port  = process.env.PORT || 3000;
 
 const publicDirectoryPath = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../views')
@@ -50,6 +51,6 @@ app.get('/weather',(req,res) => {
 //     //res.render(index.html)
 // })
 
-app.listen(3000,()=>{
-    
+app.listen(port,()=>{
+    console.log("Server Started on port : "+port)
 })

@@ -5,7 +5,7 @@ const searchElement = document.querySelector('input')
 forms.addEventListener('submit',(e)=>{
     e.preventDefault()
     const address = searchElement.value;
-    const url ='http://localhost:3000/weather?address='+address 
+    const url ='/weather?address='+address 
     fetch(url)
     .then((res)=>{
         if(res.error){
