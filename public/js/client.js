@@ -8,15 +8,15 @@ forms.addEventListener('submit',(e)=>{
     e.preventDefault()
     const address = searchElement.value;
     const url ='/weather?address='+address;
-    msg.textContent = "Loading...";
+    message.textContent = "Loading...";
     fetch(url)
     .then((res)=>{
         if(res.error){
             console.log(res.error)
-            msg.textContent = res.error
+            message.textContent = res.error
         }else{
            res.json().then((data)=>{
-            msg.textContent = JSON.stringify(data)
+            message.textContent = JSON.stringify(data)
         })
     }
     })
